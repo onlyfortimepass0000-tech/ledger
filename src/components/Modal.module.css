@@ -1,0 +1,125 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-overlay);
+  background: rgba(30, 14, 8, 0.45);
+  animation: fade var(--animation-duration-normal) ease-out;
+}
+
+/* ---- phone bottom sheet ---- */
+.sheet {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: var(--z-overlay);
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  max-height: 92dvh;
+  overflow: hidden;
+  animation: slideUp var(--animation-duration-normal) cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.closeSheet {
+  position: absolute;
+  top: 14px;
+  right: 12px;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: transparent;
+  color: var(--muted-foreground);
+  cursor: pointer;
+}
+
+/* ---- centred dialog ---- */
+.dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: var(--z-overlay);
+  width: min(92vw, 440px);
+  max-height: 90dvh;
+  overflow-y: auto;
+  padding: 20px;
+  background: var(--popup);
+  border: 1.5px solid var(--foreground);
+  border-top: 4px solid var(--gold);
+  box-shadow: var(--shadow-lg);
+  transform: translate(-50%, -50%);
+  animation: pop var(--animation-duration-normal) ease-out;
+}
+
+.closeDialog {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: transparent;
+  color: var(--muted-foreground);
+  cursor: pointer;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-right: 36px;
+  margin-bottom: var(--spacing-3);
+}
+
+.title {
+  font-family: var(--font-family-display);
+  font-weight: 400;
+  font-size: 1.35rem;
+  color: var(--primary);
+}
+
+.description {
+  font-family: var(--font-family-cursive);
+  font-size: 1rem;
+  color: var(--muted-foreground);
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-2);
+  margin-top: var(--spacing-4);
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -48%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
