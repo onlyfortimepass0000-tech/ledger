@@ -3,6 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "description": "Baithak cafe counter ledger: order entry, live ingredient stock and sales analytics.",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "dev:api": "tsx scripts/dev-api.ts",

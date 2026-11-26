@@ -1,6 +1,6 @@
-import { getSql } from "../server/db";
-import { route } from "../server/http";
-import { CAFE_TIMEZONE } from "../shared/cafe";
+import { getSql } from "../server/db.js";
+import { route } from "../server/http.js";
+import { CAFE_TIMEZONE } from "../shared/cafe.js";
 import type { OrderMeta } from "../shared/types";
 
 export default route({

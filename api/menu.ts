@@ -1,5 +1,5 @@
-import { getSql } from "../server/db";
-import { route } from "../server/http";
+import { getSql } from "../server/db.js";
+import { route } from "../server/http.js";
 import type { MenuItem, MenuResponse } from "../shared/types";
 
 export default route({

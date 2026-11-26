@@ -1,7 +1,7 @@
 import { z } from "zod";
-import { getSql } from "../server/db";
-import { HttpError, route, round2 } from "../server/http";
-import { CAFE_TIMEZONE } from "../shared/cafe";
+import { getSql } from "../server/db.js";
+import { HttpError, route, round2 } from "../server/http.js";
+import { CAFE_TIMEZONE } from "../shared/cafe.js";
 import type { Deduction, OrderLine, OrderResult } from "../shared/types";
 
 const schema = z.object({

@@ -1,6 +1,6 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 import { ZodError } from "zod";
-import { DatabaseNotConfiguredError } from "./db";
+import { DatabaseNotConfiguredError } from "./db.js";
 
 /** An error whose message is safe to show to the user. */
 export class HttpError extends Error {

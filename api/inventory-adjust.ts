@@ -1,6 +1,6 @@
 import { z } from "zod";
-import { getSql } from "../server/db";
-import { HttpError, route, round2 } from "../server/http";
+import { getSql } from "../server/db.js";
+import { HttpError, route, round2 } from "../server/http.js";
 import type { AdjustResponse, InventoryRow } from "../shared/types";
 
 const schema = z.object({

@@ -1,7 +1,7 @@
 import { z } from "zod";
-import { getSql } from "../server/db";
-import { route } from "../server/http";
-import { CAFE_TIMEZONE } from "../shared/cafe";
+import { getSql } from "../server/db.js";
+import { route } from "../server/http.js";
+import { CAFE_TIMEZONE } from "../shared/cafe.js";
 import type {
   AnalyticsPeriod,
   AnalyticsResult,
